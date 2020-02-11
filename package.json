@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/raulpopadineti/js-palindrome.git"
+    "url": "git+https://github.com/raulpopadineti/raulp-palindrome.git"
   },
   "keywords": [
     "palindrome",
@@ -18,7 +18,7 @@
   "author": "Raul Popadineti",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/raulpopadineti/js-palindrome/issues"
+    "url": "https://github.com/raulpopadineti/raulp-palindrome/issues"
   },
-  "homepage": "https://github.com/raulpopadineti/js-palindrome#readme"
+  "homepage": "https://github.com/raulpopadineti/raulp-palindrome#readme"
 }
