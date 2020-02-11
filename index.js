@@ -1,3 +1,5 @@
+module.exports = Phrase;
+
 // Adds `reverse` to all strings.
 String.prototype.reverse = function() {
   return Array.from(this).reverse().join("");
@@ -15,34 +17,18 @@ Array.prototype.last = function() {
 function Phrase(content) {
   this.content = content;
 
-  this.processor = function(string) {
-    return string.toLowerCase();
+  // Returns only the content's letters
+  this.letters = function() {
+    return (this.content.match(/[a-z]/gi) || []).join('');
   };
 
   // Returns content processed for palindrome testing.
   this.processedContent = function() {
-    return this.processor(this.content);
+    return this.letters().toLowerCase();
   };
 
   // Returns true for a palindrome, false otherwise
   this.palindrome = function() {
     return this.processedContent() === this.processedContent().reverse();
   };
-
-  // Returns a LOUDER version of content
-  this.louder = function() {
-    return this.content.toUpperCase();
-  };
 };
-
-function TranslatedPhrase(content, translation) {
-  this.content = content;
-  this.translation = translation;
-
-  // Returns translation processed for palindrome testing.
-  this.processedContent = function() {
-    return this.processor(this.translation);
-  }
-};
-
-TranslatedPhrase.prototype = new Phrase();
