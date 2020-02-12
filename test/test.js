@@ -3,6 +3,11 @@ let Phrase = require("../index.js");
 
 describe("Phrase", function() {
   describe("#palindrome", function() {
+    it("returns false for an empty phrase", function() {
+      let emptyPhrase = new Phrase('');
+      assert(!emptyPhrase.palindrome());
+    });
+
     it("returns false for a non-palindrome", function() {
       let nonPalindrome = new Phrase('test');
       assert(!nonPalindrome.palindrome());
